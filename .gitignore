@@ -1,0 +1,10 @@
+# Ignore the executables.
+*.exe
+*.out
+
+# Ignore the output files
+centered_*.obj
+
+# Ignore messy system files.
+.vscode/
+.DS_Store
