@@ -6,8 +6,10 @@
 #include <vector>
 #include <list>
 #include <cmath>
+#include <filesystem>
 
 using namespace std;
+namespace fs = std::filesystem;
 
 void Mesh::Center()
 {
@@ -147,7 +149,10 @@ void Mesh::Save(string filename)
     Output:
     None
     */
+    // Destination path.
+    fs::path fullPath = fs::absolute(filename);
 
+    cout << "Destination: " << fullPath.string() << endl;
     // Writes a new file with the centered vertices and faces.
     ofstream newFile(filename);
     for (int i = 0; i < vertices.size(); i++)

@@ -8,3 +8,4 @@ centered_*.obj
 # Ignore messy system files.
 .vscode/
 .DS_Store
+.build/

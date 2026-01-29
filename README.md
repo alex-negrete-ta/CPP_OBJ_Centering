@@ -2,7 +2,7 @@
 
 ### Description 
 
-This project was a training project to create my first C++ project that is applicable to my field using the knowledge I have acquired in pipeline td trainig.
+This project was a training project to create my first C++ project that is applicable to my field using the knowledge I have acquired in pipeline td training.
 
 ### The problem
 

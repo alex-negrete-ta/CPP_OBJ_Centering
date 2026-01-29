@@ -6,8 +6,10 @@
 #include <list>
 #include <cmath>
 #include "../include/Mesh.h"
+#include <filesystem>
 
 using namespace std;
+namespace fs = std::filesystem;
 
 int main()
 {
@@ -19,12 +21,20 @@ int main()
     // Reads in the users input.
     cout << "Whats the object filename?\n";
     getline(cin, filename);
-    outputName = "centered_" + filename;
+    // Get the outputline.
+    fs::path inputPath(filename);
+    // Extract the name, saves the new file name and path.
+    string pureFilename = inputPath.filename().string();
+    string newFilename = "centered_" + pureFilename;
+    fs::path outputPath = inputPath.parent_path() / newFilename;
+    string finalOutputName = outputPath.string();
 
     // Loads in the file and checks if is loaded.
     if (myObject.Load(filename))
     {
         cout << "Loading geometry...\n";
+
+        // Loads the geometry.
         myObject.Load(filename);
         cout << "It has been loaded. \n"
              << "Centering... \n";
@@ -41,7 +51,7 @@ int main()
          << "Saving... \n";
 
     // It saves the centered file.
-    myObject.Save(outputName);
+    myObject.Save(finalOutputName);
     cout << "Finished centering!" << endl;
 
     // Holds the screen waiting for respond.

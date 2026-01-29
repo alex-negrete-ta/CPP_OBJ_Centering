@@ -1,0 +1,3 @@
+/home/alex/code/pxrintern/objcenter/build/CMakeFiles/OBJCENTER.dir
+/home/alex/code/pxrintern/objcenter/build/CMakeFiles/edit_cache.dir
+/home/alex/code/pxrintern/objcenter/build/CMakeFiles/rebuild_cache.dir
